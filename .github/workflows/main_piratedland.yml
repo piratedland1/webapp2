@@ -29,7 +29,7 @@ jobs:
 
       - name: Run composer install if composer.json exists
         if: steps.check_files.outputs.files_exists == 'true'
-        run: npm install && composer validate --no-check-publish && composer  install --ignore-platform-req=ext-ftp
+        run: npm install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
